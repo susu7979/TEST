@@ -23,23 +23,64 @@ public class a016 {
 		Scanner scan = new Scanner(System.in);
 		int[][] num = new int[9][9];
 		int[][] num2 = new int[9][9];
+		int[][] square = new int[9][9];
 		while (scan.hasNext()) {
+			// Get num 2-dim array
 			for (int i = 0; i < 9; i++) {
 				for (int j = 0; j < 9; j++) {
 					num[i][j] = scan.nextInt();
+				}
+			}
+
+			// Get num2 2-dim array
+			for (int i = 0; i < 9; i++) {
+				for (int j = 0; j < 9; j++) {
 					num2[i][j] = num[j][i];
 				}
 			}
-			System.out.print(num2);
-//			boolean a, b;
-//			for (int i = 0; i < 9; i++) {
-//				a = checkRow(num[i]);
-//				b = checkRow(num2[i]);
-//				System.out.print(a+" ");
-//				System.out.println(b);
+
+			for (int k = 0; k < 9; k++) {
+				int add = 0;
+				int iStart;
+				if (k < 3) {
+					iStart = 0;
+				} else if (k < 6) {
+					iStart = 3;
+				} else {
+					iStart = 6;
+				}
+				int jStart;
+				if (k % 3 == 0) {
+					jStart = 0;
+				} else if (k % 3 == 1) {
+					jStart = 3;
+				} else {
+					jStart = 6;
+				}
+				for (int i = iStart; i < (iStart + 3); i++) {
+					for (int j = jStart; j < (jStart + 3); j++) {
+						square[k][add] = num[i][j];
+						add = add + 1;
+					}
+				}
 			}
-			
+
+			boolean a, b, c, flag;
+			flag = true;
+			for (int i = 0; i < 9; i++) {
+				a = checkRow(num[i]);
+				b = checkRow(num2[i]);
+				c = checkRow(square[i]);
+				if (!(a && b && c)) {
+					flag = false;
+					System.out.println("no");
+					break;
+				}
+			}
+			if (flag == true) {
+				System.out.println("yes");
+			}
 		}
-//		scan.close();
+		scan.close();
 	}
-//}
+}
