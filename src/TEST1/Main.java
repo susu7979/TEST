@@ -1,23 +1,26 @@
 package TEST1;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-//		People Susu = new People(16, "Susu", true);
-//		System.out.println(Susu.getAge());
-//		Susu.sayHello();
-//		People Susu3 = new People(15, "Susu");
-//		System.out.println(Susu.getIsPretty());
-//		Susu.setAge(12);
-//		System.out.println(Susu.getAge());
-		
-		Dog doggy = new Dog("柴柴");
-		doggy.bark();
-		Dog catty = new Dog("catty","Max","柴柴");
-		catty.bark();
-		System.out.println(doggy.getHost());
-		doggy.newHost("Susu");
-		System.out.println(doggy.getHost());
+		Scanner scan = new Scanner(System.in);
+	//	while (scan.hasNext()) {
+			System.out.print("狗狗的名字: ");			
+			String name=scan.next();
+			System.out.print("狗狗的品種: ");			
+			String species=scan.next();
+			System.out.print("狗狗的主人: ");			
+			String host=scan.next();
+			
+		}
+//		doggy.bark();
+//		Dog catty = new Dog("catty", "Max", "柴柴");
+//		catty.bark();
+//		System.out.println(doggy.getHost());
+//		doggy.newHost("Susu");
+//		System.out.println(doggy.getHost());
 	}
 
-}
+//}

@@ -5,27 +5,29 @@ public class Dog {
 	private String host;
 	private String species;
 
-	public Dog(String species) {
-		this.name = "no";
-		this.host = "no";
-		this.species = species;
-	}
-
 	public Dog(String name, String host, String species) {
 		this.name = name;
 		this.host = host;
 		this.species = species;
 	}
 
-	public void bark() {
-		if (this.host == "no") {
-			System.out.println("Hello!");
-		} else {
-			System.out.println("Hi " + this.host);
+	public class host {
+		private String hostName;
+		private int age;
+		private boolean isFemale;
+
+		public host(String hostName, int age, boolean isFemale) {
+			this.hostName = hostName;
+			this.age = age;
+			this.isFemale = isFemale;
 		}
 	}
-	
-	public String getHost(){
+
+	public void lick() {
+		System.out.println(this.host + "is be licked to dead.");
+	}
+
+	public String getHost() {
 		return this.host;
 	}
 
