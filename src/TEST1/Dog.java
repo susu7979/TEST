@@ -24,7 +24,7 @@ public class Dog {
 	}
 
 	public void lick() {
-		System.out.println(this.host + "is be licked to dead.");
+		System.out.println(this.host + "is be licked to die.");
 	}
 
 	public String getHost() {
