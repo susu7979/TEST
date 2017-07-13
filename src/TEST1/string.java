@@ -13,6 +13,11 @@ public class string {
 		System.out.println(string.length());
 		System.out.println(string.startsWith("a"));
 		System.out.println(string.split(" ")[0]);
+		String[] string2 = {"Susu", "is"};
+		char[] string3 = {'S', 'u', 's', 'u'};
+		System.out.println(string2);
+		System.out.println(string3);
+
 	}
 
 }
